@@ -12,6 +12,7 @@ module.exports = {
     }
   },
   rules: {
-    'vue/no-multiple-template-root': 'off'
+    'vue/no-multiple-template-root': 'off',
+    '@typescript-eslint/no-empty-function': 'off'
   }
 }

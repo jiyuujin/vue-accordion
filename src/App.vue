@@ -1,14 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <accordion
+    label-text="Front"
+    title="Markup"
+    :items="itemClasses"
+    @handle-item-class="updateItemClass"
+  />
 </template>
 
 <script lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Accordion from './components/Accordion.vue'
+
+import { items } from './mock'
 
 export default {
   components: {
-    HelloWorld
+    Accordion
+  },
+  computed: {
+    itemClasses() {
+      return items
+    }
+  },
+  methods: {
+    updateItemClass() {
+      //
+    }
   }
 }
 </script>
